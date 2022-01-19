@@ -46,6 +46,7 @@ http {
   <% if error_page %>
     error_page 404 500 /<%= error_page %>;
   <% end %>
+    error_page 405 =200 $uri;
   <% if proxies.any? %>
     resolver <%= resolver %>;
   <% end %>
